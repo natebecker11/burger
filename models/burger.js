@@ -1,9 +1,22 @@
 const orm = require('../config/orm.js')
 
 const burger = {
-  selectAll: orm.selectAll,
-  insertOne: orm.insertOne,
-  updateOne: orm.updateOne
+  selectAll: cb => {
+    orm.selectAll()
+      .then(data => cb(data))
+  },
+  insertOne: (burgerName, cb) => {
+    orm.insertOne(burgerName)
+      .then(data => cb(data))
+  },
+  updateOne: (id, colToChange, newValue, cb) => {
+    orm.updateOne(id, colToChange, newValue)
+      .then(data => cb(data))
+  },
+  deleteOne: id => {
+    orm.deleteOne(id)
+      .then(data => cb(data))
+  }
 }
 
 module.exports = burger
