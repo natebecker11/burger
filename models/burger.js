@@ -13,10 +13,11 @@ const burger = {
     orm.updateOne(id, colToChange, newValue)
       .then(data => cb(data))
   },
-  deleteOne: id => {
+  deleteOne: (id, cb) => {
     orm.deleteOne(id)
       .then(data => cb(data))
   }
 }
+
 
 module.exports = burger
