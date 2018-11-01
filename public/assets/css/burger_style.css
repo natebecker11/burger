@@ -1,0 +1,7 @@
+.not-devoured {
+  color: blue;
+}
+
+.devoured {
+  color: red;
+}

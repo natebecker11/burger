@@ -1,0 +1,35 @@
+<p>This is a burger burger burgey burger.</p>
+
+
+
+<div id='notDevouredDiv'>
+  {{#each data}}
+    {{#unless devoured}}
+      <div data-id={{id}}>
+        <p>id: {{id}}</p>
+        <p class='not-devoured'>name: {{burger_name}}</p>
+        <p>devoured: {{devoured}}</p>
+        <button class='devourBtn' data-id={{id}}>DEVOUR ITS BURGERSOUL</button>
+      </div>
+    {{/unless}}
+  {{/each}}
+</div>
+
+<div id='createBurgerDiv'>
+  <h2>Bring a new burger into the world</h2>
+  <form>
+    <input type='text' id='burgerInput' required>
+    <button type='submit' id='burgerSubmit'>BIRTH A BURGER</button>
+  </form>
+</div>
+
+<div id='devouredDiv'>
+  {{#each data}}
+    {{#if devoured}}
+      <p>id: {{id}}</p>
+      <p class='devoured'>name: {{burger_name}}</p>
+      <p>devoured: {{devoured}}</p>
+    {{/if}}
+  {{/each}}
+</div>
+
