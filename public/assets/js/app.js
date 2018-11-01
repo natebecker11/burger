@@ -6,3 +6,17 @@ $('#burgerSubmit').on('click', event => {
   }
   $.post('/api/burgers', payload)
 })
+
+$('.devourBtn').on('click', event => {
+  event.preventDefault()
+  let id = $(event.target).attr('data-id')
+  let payload = {
+    id: id,
+    devoured: 1
+  }
+  $.ajax({
+    url: '/api/burgers',
+    data: payload,
+    method: 'PUT'
+  })
+})

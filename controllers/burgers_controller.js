@@ -25,6 +25,11 @@ router.post('/api/burgers', (req, res) => {
   })
 })
 
+router.put('/api/burgers', (req, res) => {
+  let { devoured, id } = req.body
+  // console.log(devoured + ' ' + id)
+  burger.updateOne()
+})
 
 
 module.exports = router
