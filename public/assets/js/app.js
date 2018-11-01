@@ -1,5 +1,8 @@
 $('#burgerSubmit').on('click', event => {
-  event.preventDefault()
+  // event.preventDefault()
   let newBurgerName = $('#burgerInput').val()
-  $.post('/api/burgers', newBurgerName)
+  let payload = {
+    burgerName: newBurgerName
+  }
+  $.post('/api/burgers', payload)
 })
