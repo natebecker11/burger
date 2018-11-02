@@ -18,17 +18,22 @@ router.post('/api/burgers', (req, res) => {
   // console.log(newBurgerName)
   burger.insertOne(newBurgerName, data => {
     console.log(data)
-    let burgers = {
-      data: data
-    }
-    res.render('index', burgers)
+    // let burgers = {
+    //   data: data
+    // }
+    // res.render('index', burgers)
+    res.end()
+
   })
 })
 
 router.put('/api/burgers', (req, res) => {
   let { devoured, id } = req.body
   // console.log(devoured + ' ' + id)
-  burger.updateOne()
+  burger.updateOne(id, 'devoured', devoured, data => {
+    console.log(data)
+    res.end();
+  })
 })
 
 

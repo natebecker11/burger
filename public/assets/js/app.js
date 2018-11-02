@@ -8,7 +8,7 @@ $('#burgerSubmit').on('click', event => {
 })
 
 $('.devourBtn').on('click', event => {
-  event.preventDefault()
+  // event.preventDefault()
   let id = $(event.target).attr('data-id')
   let payload = {
     id: id,
@@ -17,6 +17,7 @@ $('.devourBtn').on('click', event => {
   $.ajax({
     url: '/api/burgers',
     data: payload,
-    method: 'PUT'
+    method: 'PUT',
+    complete: () => location.reload()
   })
 })
