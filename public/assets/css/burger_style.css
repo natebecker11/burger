@@ -1,11 +1,29 @@
-.header-area {
-  text-align: center;  
+body {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+button {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  font-size: 350%;
+}
+
+h2 {
+  font-size: 200%;
+}
 img.header-area {
   margin-right: auto;
   margin-left: auto;
   display: block;
+  height: 200px;
+  width: 200px;
 }
 
 .burger-area {
@@ -30,10 +48,42 @@ img.header-area {
 .not-devoured-container {
   position: relative;
   border: 2px dotted black;
+  width: 90%;
+  height: 75px;
+}
+
+.not-devoured {
+  position: absolute;
+  left: 5%;
+  top: 5px;
+  width: 50%;
 }
 
 .devourBtn {
   position: absolute;
-  top: 5px;
-  left: 35px;
+  top: 30%;
+  left: 58%;
+  width: 40%;
+  height: 40%;
+}
+
+.strikethrough-diagonal {
+  position: relative;
+  /* color: red; */
+  font-weight: bold;  
+  
+}
+
+.strikethrough-diagonal:before {  
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 45%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    transform: skewY(-10deg);  
+    color: red;
 }

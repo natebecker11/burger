@@ -9,26 +9,26 @@
 
           <p class='not-devoured'>{{burger_name}}</p>
 
-          <button class='devourBtn' data-id={{id}}>DEVOUR ITS BURGERSOUL</button>
+          <button class='devourBtn' data-id={{id}}>DEVOUR</button>
         </div>
       {{/unless}}
     {{/each}}
   </div>
 
   <div id='createBurgerDiv'>
-    <h2>Bring a new burger into the world</h2>
+    <h2>Add a Burger to the List</h2>
     <form>
       <input type='text' id='burgerInput' required>
-      <button type='submit' id='burgerSubmit'>BIRTH A BURGER</button>
+      <button type='submit' id='burgerSubmit'>ADD</button>
     </form>
   </div>
 
   <div id='devouredDiv'>
-    <h2>Burgers I Have Known And Loved</h2>
+    <h2>Burgers I Have Known And Devoured</h2>
     {{#each data}}
       {{#if devoured}}
 
-        <p class='devoured'>{{burger_name}}</p>
+        <p class='devoured strikethrough-diagonal'>{{burger_name}}</p>
 
       {{/if}}
     {{/each}}
