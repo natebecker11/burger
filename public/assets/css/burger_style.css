@@ -5,6 +5,7 @@ body {
 
 button {
   font-family: 'Josefin Sans', sans-serif;
+  padding: 5px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -12,11 +13,15 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 350%;
+  font-size: 400%;
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 325%;
+}
+
+h3 {
+  font-size: 220%;
 }
 img.header-area {
   margin-right: auto;
@@ -47,10 +52,10 @@ img.header-area {
 
 .not-devoured-container {
   position: relative;
-  border: 2px dotted black;
   width: 90%;
   height: 75px;
 }
+
 
 .not-devoured {
   position: absolute;
@@ -63,27 +68,28 @@ img.header-area {
   position: absolute;
   top: 30%;
   left: 58%;
-  width: 40%;
-  height: 40%;
 }
 
 .strikethrough-diagonal {
-  position: relative;
-  /* color: red; */
-  font-weight: bold;  
-  
+  position: relative;  
 }
 
 .strikethrough-diagonal:before {  
     position: absolute;
     content: '';
-    left: 0;
+    left: 20px;
     top: 45%;
-    right: 0;
+    right: 20px;
     border-top: 1px solid;
     border-color: inherit;
     -webkit-transform: skewY(-10deg);
     -moz-transform: skewY(-10deg);
     transform: skewY(-10deg);  
     color: red;
+    font-size: 12px;
+    opacity: 20%;
+}
+
+footer {
+  margin-top: 40px;
 }
