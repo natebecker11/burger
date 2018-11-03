@@ -1,7 +1,27 @@
-.not-devoured {
-  color: blue;
+.header-area {
+  text-align: center;  
 }
 
-.devoured {
-  color: red;
+img.header-area {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
+
+.burger-area {
+  display: grid;
+  grid-template-columns: 1fr 5% 15% 30% 15% 5% 1fr
+}
+
+#notDevouredDiv {
+  grid-column: 3 / 4;
+}
+
+#createBurgerDiv {
+  grid-column: 4 / 5;
+}
+
+#devouredDiv {
+  grid-column: 5 / 6;
+}
+

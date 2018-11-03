@@ -1,35 +1,36 @@
-<p>This is a burger burger burgey burger.</p>
 
 
+<div class='burger-area'>
+  <div id='notDevouredDiv'>
+    <h2>Burgers to Devour</h2>
+    {{#each data}}
+      {{#unless devoured}}
+        <div data-id={{id}}>
 
-<div id='notDevouredDiv'>
-  {{#each data}}
-    {{#unless devoured}}
-      <div data-id={{id}}>
+          <p class='not-devoured'>name: {{burger_name}}</p>
 
-        <p class='not-devoured'>name: {{burger_name}}</p>
+          <button class='devourBtn' data-id={{id}}>DEVOUR ITS BURGERSOUL</button>
+        </div>
+      {{/unless}}
+    {{/each}}
+  </div>
 
-        <button class='devourBtn' data-id={{id}}>DEVOUR ITS BURGERSOUL</button>
-      </div>
-    {{/unless}}
-  {{/each}}
+  <div id='createBurgerDiv'>
+    <h2>Bring a new burger into the world</h2>
+    <form>
+      <input type='text' id='burgerInput' required>
+      <button type='submit' id='burgerSubmit'>BIRTH A BURGER</button>
+    </form>
+  </div>
+
+  <div id='devouredDiv'>
+    <h2>Burgers I Have Known And Loved</h2>
+    {{#each data}}
+      {{#if devoured}}
+
+        <p class='devoured'>name: {{burger_name}}</p>
+
+      {{/if}}
+    {{/each}}
+  </div>
 </div>
-
-<div id='createBurgerDiv'>
-  <h2>Bring a new burger into the world</h2>
-  <form>
-    <input type='text' id='burgerInput' required>
-    <button type='submit' id='burgerSubmit'>BIRTH A BURGER</button>
-  </form>
-</div>
-
-<div id='devouredDiv'>
-  {{#each data}}
-    {{#if devoured}}
-
-      <p class='devoured'>name: {{burger_name}}</p>
-
-    {{/if}}
-  {{/each}}
-</div>
-
