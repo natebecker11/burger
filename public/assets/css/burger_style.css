@@ -10,7 +10,8 @@ img.header-area {
 
 .burger-area {
   display: grid;
-  grid-template-columns: 1fr 5% 15% 30% 15% 5% 1fr
+  grid-template-columns: 1fr 5% 15% 30% 15% 5% 1fr;
+  gap: 5px;
 }
 
 #notDevouredDiv {
@@ -25,3 +26,14 @@ img.header-area {
   grid-column: 5 / 6;
 }
 
+
+.not-devoured-container {
+  position: relative;
+  border: 2px dotted black;
+}
+
+.devourBtn {
+  position: absolute;
+  top: 5px;
+  left: 35px;
+}

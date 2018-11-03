@@ -5,9 +5,9 @@
     <h2>Burgers to Devour</h2>
     {{#each data}}
       {{#unless devoured}}
-        <div data-id={{id}}>
+        <div data-id={{id}} class='not-devoured-container'>
 
-          <p class='not-devoured'>name: {{burger_name}}</p>
+          <p class='not-devoured'>{{burger_name}}</p>
 
           <button class='devourBtn' data-id={{id}}>DEVOUR ITS BURGERSOUL</button>
         </div>
@@ -28,7 +28,7 @@
     {{#each data}}
       {{#if devoured}}
 
-        <p class='devoured'>name: {{burger_name}}</p>
+        <p class='devoured'>{{burger_name}}</p>
 
       {{/if}}
     {{/each}}
