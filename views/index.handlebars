@@ -1,7 +1,18 @@
 
 
 <div class='burger-area'>
-  <div id='notDevouredDiv'>
+  <div id='burgerButtons'>
+    <button data-id="notDevoured">
+      To Devour
+    </button>
+    <button data-id='createBurger'>
+      Add Burger
+    </button>
+    <button data-id="theDevoured">
+      The Devoured
+    </button>
+  </div>
+  <div id='notDevouredDiv' class='burger-content'>
     <h3>Burgers to Devour</h3>
     {{#each data}}
       {{#unless devoured}}
@@ -15,15 +26,16 @@
     {{/each}}
   </div>
 
-  <div id='createBurgerDiv'>
+  <div id='createBurgerDiv' class='burger-content'>
     <h3>Add a Burger to the List</h3>
     <form>
       <input type='text' id='burgerInput' required>
       <button type='submit' id='burgerSubmit'>ADD</button>
     </form>
+    <p class='invis form-alert'>Please enter a name less than 50 characters!</p>
   </div>
 
-  <div id='devouredDiv'>
+  <div id='theDevouredDiv' class='burger-content'>
     <h3>The Devoured</h3>
     {{#each data}}
       {{#if devoured}}
