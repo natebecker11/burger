@@ -15,7 +15,7 @@ const insertOne = (burgerName) => {
   return new Promise ((resolve, reject) => {
     connection.query(
       'INSERT INTO burgers (burger_name, devoured) VALUES (?, false)', [burgerName], (err, data) => {
-        if (err) reject(err)
+        if (err) return reject(err)
         if (data.affectedRows !== 1) reject('Error: No data entered')
         resolve(data)
       }
